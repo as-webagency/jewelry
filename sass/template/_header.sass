@@ -1,0 +1,196 @@
+.header
+    &__content
+        +flex
+        padding: 41px 0 38px
+        justify-content: space-between
+    &__menu
+        margin-top: 1px
+        margin-right: 25%
+    &__burger
+        display: none
+        position: relative
+        background-color: transparent
+        top: 11px
+        width: 25px
+        height: 19px
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            width: 100%
+            height: 1px
+            transition: all .3s
+            background-color: rgba($green, .502)
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+        span
+            position: absolute
+            top: 9px
+            left: 0
+            width: 100%
+            height: 1px
+            background-color: rgba($green, .502)
+            transition: all .3s
+        &.burger--active
+            &::before
+                top: 9px
+                transform: rotate(45deg)
+            &::after
+                transform: rotate(-45deg)
+                bottom: 9px
+            span
+                transform: scale(0)
+.menu
+    &__list
+        +flex
+    &__item
+        position: relative
+        &:last-child
+            .menu
+                &__link
+                    &::after
+                        content: ''
+                        background: url('../image/arrow.png') center no-repeat
+                        width: 14px
+                        height: 7px
+                        position: absolute
+                        top: 14px
+                        right: -5px
+    &__link
+        font-size: 13px
+        color: $grey
+        transition: all .3s
+        display: block
+        text-transform: uppercase
+        letter-spacing: 1.5px
+        padding: 10px 15px
+.sub
+    &-menu
+        opacity: 0
+        visibility: hidden
+        transform: scaleY(0)
+        min-width: 182px
+        position: absolute
+        top: 32px
+        left: -15px
+        background-color: $green
+        z-index: 10
+        padding: 19px 0 12px
+        transition: all .3s
+        transform-origin: 0 0 0
+        &__item
+            margin-bottom: 6px
+            &:nth-child(2),
+            &:nth-child(3)
+                .sub-menu
+                    &__link
+                        &::after
+                            content: ''
+                            background: url('../image/arrow_light.png') center no-repeat
+                            width: 11px
+                            height: 5px
+                            position: absolute
+                            top: 9px
+                            right: 6px
+                            transition: all .3s
+                        &:hover
+                            &::after
+                                transform: rotate(-90deg)
+        &__link
+            color: $white
+            font-size: 11px
+            line-height: 20px
+            text-transform: uppercase
+            display: block
+            letter-spacing: 2px
+            padding: 1px 4px
+            margin: 0 13px
+            border: 1px solid transparent
+            transition: all .3s
+            position: relative
+            &:hover
+                border: 1px solid rgba(236, 250, 249, .1)
+    &-sub
+        &-menu
+            opacity: 0
+            visibility: hidden
+            transform: scaleY(0)
+            min-width: 185px
+            position: absolute
+            top: 30px
+            left: 100%
+            border-left: 3px solid $white
+            background-color: $green
+            padding: 17px 13px 10px
+            transition: all .3s
+            transform-origin: 0 0 0
+            &__item
+                margin-bottom: 5px
+                &:last-child
+                    margin-bottom: 0
+            &__link
+                color: $white
+                font-size: 11px
+                line-height: 20px
+                text-transform: uppercase
+                display: block
+                letter-spacing: 2px
+                padding: 3px 5px
+                border: 1px solid transparent
+                transition: all .3s
+                &:hover
+                    border: 1px solid rgba(236, 250, 249, .1)
+body
+    &.mouse 
+        .menu
+            &__item
+                &:hover 
+                    .sub
+                        &-menu
+                            opacity: 1
+                            visibility: visible
+                            transform: scaleY(1)
+                            &__link
+                                &:hover
+                                    &::after
+                                        transform: rotate(-90deg)
+                            &__item
+                                &:hover
+                                    .sub
+                                        &-sub
+                                            &-menu
+                                                opacity: 1
+                                                visibility: visible
+                                                transform: scaleY(1)
+    &.touch
+        .menu
+            &__item
+                &.open
+                    &::after
+                        transform: rotate(-90deg)
+                    & + .sub-menu
+                        opacity: 1
+                        visibility: visible
+                        transform: scaleY(1)
+                    .sub
+                        &-menu
+                            opacity: 1
+                            visibility: visible
+                            transform: scaleY(1)
+                            &__link
+                                &:hover
+                                    &::after
+                                        transform: rotate(-90deg)
+                    .sub
+                        &-sub
+                            &-menu
+                                opacity: 1
+                                visibility: visible
+                                transform: scaleY(1)
+                                &__link
+                                    &:hover
+                                        &::after
+                                            transform: rotate(-90deg)
