@@ -472,11 +472,17 @@ button {
 }
 
 .title {
-  font-size: 34px;
-  color: #262626;
-  text-align: center;
+  font-size: 33px;
   line-height: 42px;
   margin: 0;
+}
+
+.title--primary {
+  color: #262626;
+}
+
+.clear {
+  clear: both;
 }
 
 .header__content {
@@ -763,20 +769,351 @@ body.touch .menu__item.open .sub-sub-menu__link:hover::after {
 }
 
 .typography {
-  padding: 73px 0 47px;
+  padding: 38px 0 39px;
+}
+
+.typography .container {
+  max-width: 705px;
 }
 
 .typography__title {
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 38px;
 }
 
-.typography p {
+.typography__title + p {
   font-family: 'Lato', sans-serif;
   font-weight: normal;
-  color: #7d7d7d;
-  margin: 0;
   font-size: 15px;
   line-height: 22px;
+  margin: 0 0 39px;
+}
+
+.typography__title + p span {
+  color: #1f3315;
+  text-decoration: underline;
+}
+
+.typography__content h1,
+.typography__content h2,
+.typography__content h3,
+.typography__content h4,
+.typography__content h5,
+.typography__content h6 {
+  color: #262626;
+}
+
+.typography__content h1 {
+  font-size: 44px;
+  margin: 0 0 27px;
+}
+
+.typography__content > p {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0 0 37px;
+}
+
+.typography__content h2 {
+  font-size: 34px;
+  margin: 0 0 27px;
+}
+
+.typography__content h3 {
+  font-size: 24px;
+  margin: -7px 0 20px;
+}
+
+.typography__content h4 {
+  font-size: 20px;
+  margin: -6px 0 16px;
+}
+
+.typography__content h5 {
+  font-size: 17px;
+  margin: -10px 0 10px;
+}
+
+.typography__content h6 {
+  font-size: 13px;
+  margin: -13px 0 8px;
+}
+
+.typography__lines {
+  margin-top: 44px;
+}
+
+.content {
+  padding: 0 0 42px;
+}
+
+.content .container {
+  max-width: 705px;
+}
+
+.content__lines {
+  margin-top: 28px;
+}
+
+.the-content__title {
+  margin-bottom: 23px;
+}
+
+.the-content p {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0 0 14px;
+}
+
+.the-content__wrap {
+  margin-bottom: 10px;
+}
+
+.the-content__wrap img {
+  float: left;
+  margin: 0 45px 20px 0;
+}
+
+.the-content__wrap p {
+  float: right;
+  display: contents;
+}
+
+.the-content__wrap:nth-child(2) p {
+  float: left;
+  display: contents;
+}
+
+.the-content__wrap:nth-child(2) img {
+  float: right;
+  margin: 0 0 20px 45px;
+  max-width: 315px;
+}
+
+.blockquotes {
+  padding: 0 0 25px;
+}
+
+.blockquotes .container {
+  max-width: 705px;
+}
+
+.blockquotes__title {
+  margin-bottom: 24px;
+}
+
+.blockquotes__lines {
+  margin-top: 45px;
+}
+
+.blockquotes p {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.blockquotes__content {
+  margin: 15px 0 22px 57px;
+  border-left: 2px solid rgba(63, 91, 44, 0.302);
+  padding-left: 32px;
+  position: relative;
+}
+
+.blockquotes__content--bg {
+  background-color: #3f5b2c;
+  border-left: none;
+  padding: 30px 40px 26px 95px;
+  margin: 24px 0 27px 58px;
+}
+
+.blockquotes__content--bg::before {
+  content: '';
+  background: url("../image/quote.png") center no-repeat;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 35px;
+  left: 28px;
+}
+
+.blockquotes__content > .blockquotes__text {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 19px;
+  color: #1f3315;
+  line-height: 26px;
+  margin: 0 0 15px;
+}
+
+.blockquotes__content > .blockquotes__text--bg {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 15px;
+  position: relative;
+}
+
+.blockquotes__content > .blockquotes__text--bg::before {
+  content: '';
+  width: 2px;
+  height: 134px;
+  position: absolute;
+  top: -10px;
+  left: -19px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.blockquotes__content > .blockquotes__name {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.blockquotes__content > .blockquotes__name--bg {
+  color: #ffffff;
+}
+
+.tables {
+  padding: 15px 0 69px;
+}
+
+.tables .container {
+  max-width: 705px;
+}
+
+.tables__title {
+  margin-bottom: 28px;
+}
+
+.table__head th {
+  font-size: 17px;
+  color: #262626;
+  padding: 23px 20px 21px 19px;
+  border: 1px solid #c1cdb8;
+  text-align: left;
+}
+
+.table__body td {
+  font-size: 14px;
+  color: #7d7d7d;
+  padding: 24px 19px;
+  border: 1px solid #c1cdb8;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.footer__content {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  margin-right: 40px;
+}
+
+.footer__list, .footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__list {
+  margin-top: 7px;
+}
+
+.footer__item {
+  margin-right: 25px;
+}
+
+.footer__link {
+  font-size: 13px;
+  color: #7d7d7d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer__right {
+  max-width: 250px;
+  width: 100%;
+}
+
+.subscribe-form form {
+  position: relative;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.302);
+}
+
+.subscribe-form__group {
+  position: relative;
+}
+
+.subscribe-form__group::before {
+  content: '';
+  background: url("../image/mail.png") center no-repeat;
+  width: 21px;
+  height: 17px;
+  position: absolute;
+  top: 11px;
+  left: -32px;
+}
+
+.subscribe-form__input {
+  height: 26px;
+  padding: 0 85px 0 3px;
+}
+
+.subscribe-form__input::-webkit-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #7d7d7d;
+  line-height: 16px;
+}
+
+.subscribe-form__input:-ms-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #7d7d7d;
+  line-height: 16px;
+}
+
+.subscribe-form__input::-ms-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #7d7d7d;
+  line-height: 16px;
+}
+
+.subscribe-form__input::placeholder {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #7d7d7d;
+  line-height: 16px;
+}
+
+.subscribe-form__button {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  background-color: transparent;
 }
 
 .popup {

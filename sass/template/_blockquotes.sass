@@ -1,0 +1,52 @@
+.blockquotes
+    padding: 0 0 25px
+    .container
+        +max
+    &__title
+        margin-bottom: 24px
+    &__lines
+        margin-top: 45px
+    p
+        +p
+    &__content
+        margin: 15px 0 22px 57px
+        border-left: 2px solid rgba($green, .302)
+        padding-left: 32px
+        position: relative
+        &--bg
+            background-color: $green
+            border-left: none
+            padding: 30px 40px 26px 95px
+            margin: 24px 0 27px 58px
+            &::before
+                content: ''
+                background: url('../image/quote.png') center no-repeat
+                width: 27px
+                height: 27px
+                position: absolute
+                top: 35px
+                left: 28px
+        > .blockquotes
+            &__text
+                font-family: 'Playfair Display', sans-serif
+                font-size: 19px
+                color: $underLine
+                line-height: 26px
+                margin: 0 0 15px
+                &--bg
+                    color: $white
+                    font-size: 16px
+                    margin: 0 0 15px
+                    position: relative
+                    &::before
+                        content: ''
+                        width: 2px
+                        height: 134px
+                        position: absolute
+                        top: -10px
+                        left: -19px
+                        background-color: rgba($white, .2)
+            &__name
+                +p
+                &--bg
+                    color: $white

@@ -1,11 +1,44 @@
 .typography
-    padding: 73px 0 47px
+    padding: 38px 0 39px
+    .container
+        +max
     &__title
-        margin-bottom: 50px
-    p
-        font-family: 'Lato', sans-serif
-        font-weight: normal
-        color: $grey
-        margin: 0
-        font-size: 15px
-        line-height: 22px
+        text-align: center
+        margin-bottom: 38px
+        + p
+            +p
+            margin: 0 0 39px
+            span
+                color: $underLine
+                text-decoration: underline
+    &__content
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+            color: $dark
+        h1
+            font-size: 44px
+            margin: 0 0 27px
+        > p
+            +p
+            margin: 0 0 37px
+        h2
+            font-size: 34px
+            margin: 0 0 27px
+        h3
+            font-size: 24px
+            margin: -7px 0 20px
+        h4
+            font-size: 20px
+            margin: -6px 0 16px
+        h5
+            font-size: 17px
+            margin: -10px 0 10px
+        h6
+            font-size: 13px
+            margin: -13px 0 8px
+    &__lines
+        margin-top: 44px

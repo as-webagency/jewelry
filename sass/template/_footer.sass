@@ -1,0 +1,53 @@
+.footer
+    &__content
+        padding: 40px 0
+        display: flex
+        justify-content: space-between
+    &__logo
+        margin-right: 40px
+    &__list,
+    &__left
+        +flex
+    &__list
+        margin-top: 7px
+    &__item
+        margin-right: 25px
+    &__link
+        font-size: 13px
+        color: $grey
+        text-transform: uppercase
+        letter-spacing: 1px
+    &__right
+        max-width: 250px
+        width: 100%
+.subscribe-form
+    form
+        position: relative
+        border-bottom: 1px solid rgba($grey, .302)
+    &__group
+        position: relative
+        &::before
+            content: ''
+            background: url('../image/mail.png') center no-repeat
+            width: 21px
+            height: 17px
+            position: absolute
+            top: 11px
+            left: -32px
+    &__input
+        height: 26px
+        padding: 0 85px 0 3px
+        &::placeholder
+            font-family: 'Lato', sans-serif
+            font-style: italic
+            font-size: 14px
+            color: $grey
+            line-height: 16px
+    &__button
+        font-family: 'Playfair Display', sans-serif
+        font-weight: bold
+        font-size: 17px
+        position: absolute
+        top: 3px
+        right: 0
+        background-color: transparent
