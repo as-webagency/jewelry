@@ -1,0 +1,105 @@
+.blog
+    padding: 10px 0
+    .container
+        +max
+    &-article
+        &__icon
+            background: url('../image/blog/icon.png') center no-repeat
+            width: 94px
+            height: 47px
+            margin: 38px auto 0
+            position: relative
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                top: 18px
+                width: 82px
+                height: 1px
+                background-color: $after
+            &::before
+                left: -105px
+            &::after
+                right: -99px
+        &__wrapper
+            margin-top: 55px
+            &--bg
+                background-color: $blogBg
+        &__bottom
+            padding: 15px 47px 53px
+            position: relative
+        &__data
+            font-family: 'Lato', sans-serif
+            font-style: italic
+            font-size: 14px
+            line-height: 22px
+            margin-bottom: 15px
+            letter-spacing: 0.3px
+        &__title
+            font-size: 34px
+            color: $dark
+            margin: 0 0 20px
+            line-height: 42px
+            border-bottom: 1px solid $dark
+            display: inline-block
+        p
+            +p
+            margin: 0 0 26px
+        &__link
+            text-transform: uppercase
+            font-size: 12px
+            line-height: 26px
+            color: $white
+            background-color: $green
+            padding: 9px 43px
+            display: inline-block
+            margin-left: 3px
+            letter-spacing: 2px
+        &__comment
+            border: 1px solid rgba($grey, .1)
+            position: absolute
+            bottom: 68px
+            right: 0
+            font-family: 'Lato', sans-serif
+            font-size: 12px
+            line-height: 29px
+            width: 38px
+            height: 30px
+            padding: 0 9px
+            &::after
+                content: ''
+                position: absolute
+                top: 11px
+                right: 7px
+                background: url('../image/blog/chat.png') center no-repeat
+                width: 10px
+                height: 9px
+        &__lines
+            margin-top: 50px
+.pagination
+    +flex-items-center
+    margin: 47px 0
+    &-prev,
+    &-next
+        width: 10px
+        height: 20px
+        cursor: pointer
+    &-prev
+        background: url('../image/blog/arrow_prev.png') center no-repeat
+    &-next
+        background: url('../image/blog/arrow_next.png') center no-repeat
+    &__list
+        +flex
+        margin: 0 23px
+    &__item
+        margin: 0 5px
+    &__link
+        font-size: 18px
+        color: $dark
+        line-height: 22px
+        +flex-content-center
+        width: 43px
+        height: 43px
+        &--active
+            background-color: $paginate
+            
